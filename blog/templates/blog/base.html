@@ -18,6 +18,16 @@
                 <a href="{% url 'post_new' %}" class="top-menu">
                     {% include './icons/file-earmark-plus.svg' %}
                 </a>
+                <p class="top-menu">
+                    <small> <small> <small> <small>
+                        Hello {{ user.username }} 
+                        (<a href="{% url 'logout' %}">Log out</a>) 
+                    </small></small></small></small>
+                </p>
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu">
+                    {% include 'registration/icons/unlock.svg' %}
+                </a>
             {% endif %}
             
             <h1><a href="/">LBenno Blog</a></h1>

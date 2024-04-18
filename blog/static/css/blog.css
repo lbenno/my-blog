@@ -68,3 +68,11 @@ h4 {
     color: #FFFFFF;
     background-color: #C25100;
 }
+
+.comment {
+    font-size: 13px; 
+}
+
+.comment > .author {
+    color: #828282; 
+}
