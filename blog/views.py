@@ -5,8 +5,8 @@ from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
 # Create your views here.
-def landing(request):
-    return render(request, 'blog/landing.html', {})
+def home(request):
+    return render(request, 'blog/home.html', {})
 
 
 @login_required

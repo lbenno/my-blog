@@ -2,9 +2,14 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+POST_TYPE_CHOICES = ( 
+    ("Blog", "Blog"), 
+    ("Project", "Project"),
+)
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    post_type = models.CharField(choices=POST_TYPE_CHOICES, default='Blog', max_length=50)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
