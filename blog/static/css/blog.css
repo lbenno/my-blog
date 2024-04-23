@@ -9,7 +9,7 @@
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
+    color: #b0adad;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -37,7 +37,7 @@ h4 {
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
-    color: #ffffff;
+    color: #696767;
     float: right;
     font-size: 26pt;
     margin-right: 20px;

@@ -5,6 +5,15 @@ from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
 # Create your views here.
+def landing(request):
+    return render(request, 'blog/landing.html', {})
+
+
+@login_required
+def test(request):
+    return render(request, 'blog/test.html', {})
+
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})

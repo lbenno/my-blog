@@ -1,0 +1,33 @@
+
+.raleway-blog {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+.page-header {
+    background-color: #2e2e40;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+}
+
+
+body {
+    background-color: rgb(202, 204, 205);
+    font-family: "Raleway", sans-serif;
+  }
+
