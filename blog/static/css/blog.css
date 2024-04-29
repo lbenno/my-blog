@@ -1,5 +1,23 @@
+body {
+    background-color: rgb(202, 204, 205);
+    font-family: "Raleway", sans-serif;
+  }
+
+
+h1, h2, h3, h4 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    color: #918e8e;
+}
+
 .date {
-    color: #828282;
+    color: #565656;
 }
 
 .save {
@@ -13,15 +31,19 @@
 
 .top-menu,
 .top-menu:hover,
-.top-menu:visited {
-    color: #696767;
+.top-menu:visited,
+.top-menu p {
+    color: #918e8e;
+    font-size: 14pt;
+    padding-right: 3%;
+    margin-right: 5%;
+    z-index: 1;
+    position: relative;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .post h2 a,
@@ -51,5 +73,5 @@
 }
 
 .comment > .author {
-    color: #828282; 
+    color: #565656; 
 }

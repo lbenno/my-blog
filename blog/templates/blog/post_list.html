@@ -1,4 +1,4 @@
-{% extends 'blog/test.html' %}
+{% extends 'blog/base.html' %}
 
 {% block content %}
     {% for post in posts %}
@@ -7,8 +7,8 @@
                 {{ post.published_date }}
             </time>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+            <p>{{ post.subtitle|linebreaksbr }}</p>
+            <a class="comment_count" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </article>
     {% endfor %}
 {% endblock %}

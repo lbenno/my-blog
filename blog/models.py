@@ -11,7 +11,9 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     post_type = models.CharField(choices=POST_TYPE_CHOICES, default='Blog', max_length=50)
     title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=500, null=True, blank=True)
     text = models.TextField()
+    image = models.ImageField(null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 

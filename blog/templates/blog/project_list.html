@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+        <table class="post">
+            <tr>
+                <time class="date" datetime="YYYY-MM-DD" value="{{ post.published_date }}">{{ post.published_date }}</time>
+            </article>
+                <td>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.subtitle|linebreaksbr }}</p>
+
+                </td>
+                <td>
+                    {% if post.image %}
+                    <img class="project_image"
+                         src="{{ post.image.url }}" 
+                         alt="IMAGE NOT AVAILABLE"/>
+                    {% else %}
+                    <img class="project_image"
+                        src="../../static/img/lbenno-cartoon.png" 
+                        alt="IMAGE NOT AVAILABLE"/>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </article>
+    {% endfor %}
+{% endblock %}
