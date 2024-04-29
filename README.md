@@ -37,6 +37,18 @@ python manage.py collectstatic
 
 #### Run Migrations in PythonAnywhere
 
+Ensure migrations were made before the git pull into Pythonanywhere.
 
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Then, from Pythonanywhere
+```bash
+python manage.py migrate
+```
 
 #### Deploy to the Web
+
+Got to the 'Web' section of PythonAnywhere and click <span style="background-color: navy;">'Reload lbenno/pythonanywhere.com'<span>
