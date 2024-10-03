@@ -57,6 +57,19 @@ cd lbenno.pythonanywhere.com
 git pull
 ```
 
+or, open the virtual env console 
+```bash
+(lbenno.pythonanywhere.com) 18:30 ~/lbenno.pythonanywhere.com (master)$ 
+(lbenno.pythonanywhere.com) 18:30 ~/lbenno.pythonanywhere.com (master)$ git pull
+```
+
+## If you've installed packages as part of your updates, remember to include them in requirements
+
+```bash
+pip3 freeze > requirements.txt
+```
+
+
 
 #### Load static files to PythonAnywhere
 
