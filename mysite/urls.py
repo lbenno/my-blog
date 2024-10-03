@@ -18,12 +18,15 @@ from django.urls import path, include
 from django.contrib.auth import views
 from django.conf.urls.static import static
 from django.conf import settings
+from froala_editor import views as fraolaviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('', include('blog.urls')),
+    path('froala_editor/',include('froala_editor.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

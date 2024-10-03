@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="{% static 'css/blog2.css' %}">
         <link rel="stylesheet" href="{% static 'css/blog3.css' %}">
+        {{ form.media }}
     </head>
 
     <body>
@@ -42,7 +43,9 @@
 
         <div id="mySidenav" class="sidenav">
             <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
-            <img class="greyscale" src="../../static/img/lbenno-cartoon.png" alt="Pic of Lauren" width="120">
+            <img class="greyscale" 
+                src="{% static 'img/lbenno-cartoon.png'%}"
+                alt="Pic of Lauren" width="120">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'post_list' %}">Blog</a>
             <a href="{% url 'project_list' %}">Projects</a>

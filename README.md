@@ -1,3 +1,33 @@
+# How to run in terminal
+
+## Run virtual environment 
+
+```bash
+source myvenv/bin/activate
+```
+
+## Start the app  
+
+```bash
+python3 manage.py runserver
+```
+
+## If the site displays without formattng 
+It means DEBUG is set to False. 
+Try uncommenting 'DEBUG = True' in the settings.py file and rerun the app. 
+If formatting reappears, re-comment-out the setting and let the os.environ check run. 
+
+
+
+## To Run files and functions in the shell
+
+```bash
+python3 manage.py shell
+
+>>> from { file_name } import { function/Class/etc }
+>>> print(function())
+>>> exit()
+```
 
 
 # How to deploy

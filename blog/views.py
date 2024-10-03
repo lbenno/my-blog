@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
+from .tests import test_detail
 
 # Create your views here.
 def home(request):
@@ -11,7 +12,7 @@ def home(request):
 
 @login_required
 def test(request):
-    return render(request, 'blog/test.html', {})
+    return render(request, 'blog/test.html', {'test': test_detail })
 
 
 def post_list(request):

@@ -1,10 +1,11 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from froala_editor.fields import FroalaField
 
 POST_TYPE_CHOICES = ( 
     ("Blog", "Blog"), 
-    ("Project", "Project"),
+    ("Project", "Project")
 )
 
 class Post(models.Model):
@@ -12,7 +13,8 @@ class Post(models.Model):
     post_type = models.CharField(choices=POST_TYPE_CHOICES, default='Blog', max_length=50)
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=500, null=True, blank=True)
-    text = models.TextField()
+    text = FroalaField()
+    # text = models.TextField()
     image = models.ImageField(null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
